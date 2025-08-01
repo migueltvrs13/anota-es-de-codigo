@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+</head>
+<body>
+    <h1>censo ibge</h1>
+    <form action="" method="POST">
+        <input type="text" placeholder="nome" name="nome">
+        <input type="password" placeholder="senha" name="senha">
+        <input type="email" placeholder="email" name="email">
+        <button>enviar</button>
+    </form>
+
+    {% include 'response/errors.html' %}
+
+    {% for usuario in lista %}
+    <p> {{ usuario.nome}} | {{ usuario['nome'] }} | {{ usuario[1] }}</p>
+    {% endfor %}
+</body>
+</html>
